@@ -73,7 +73,7 @@ class Classifier(nn.Module):
     def __init__(self, d_model = 6272):
         super(Classifier, self).__init__()
         self.classifier = nn.Sequential(
-            nn.Linear(d_model, 2),
+            nn.Linear(d_model, 10),
             nn.Sigmoid()
         )
 
@@ -194,7 +194,7 @@ class Classifier_Trans(nn.Module):
         self.classifier = nn.Sequential(
             nn.Linear(d_model, 256),
             nn.ReLU(),
-            nn.Linear(256, 2),
+            nn.Linear(256, 10),
             nn.Sigmoid()
         )
 
